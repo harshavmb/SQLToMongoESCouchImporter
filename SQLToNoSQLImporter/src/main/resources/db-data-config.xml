@@ -1,0 +1,20 @@
+<dataConfig>
+
+    <dataSource driver="com.mysql.jdbc.Driver" url="jdbc:mysql://localhost:3306/publishing" user="prod" password="Welcome1" batch-size="-1"/>
+   
+    <document>
+       <entity name="skus" pk="sku_id" query="select sku_id,display_name,creation_date,workspace_id,branch_id,checkin_date,version from dcs_sku">
+		  <field column="sku_id" name="sku_id" type="string"/>
+		  <field column="display_name" name="display_name" type="string"/>
+		  <field column="creation_date" name="creation_date" type="date"/>
+		  <field column="workspace_id" name="workspace_id" type="string"/>
+		  <field column="branch_id" name="branch_id" type="string"/>
+		  <field column="checkin_date" name="checkin_date" type="date"/>
+		  <field column="version" name="version" type="integer"/>    
+         
+          <!-- <entity name="tweet"  multiValued="true" query="SELECT MESSAGE FROM TWEET WHERE USER_ID='${user.id}'"> 
+				<field name="tweet" column="MESSAGE" type="string" />
+		  </entity> -->
+	   </entity>	   
+    </document>	
+</dataConfig>
